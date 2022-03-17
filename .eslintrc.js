@@ -21,5 +21,17 @@ module.exports = {
 
         'comma-dangle': ['error', 'always',],
         'no-cond-assign': ['error', 'always',],
+
+        'vue/html-indent': [
+            'error',
+            4,
+            {
+                attribute: 1,
+                baseIndent: 1,
+                closeBracket: 0,
+                alignAttributesVertically: true,
+                ignores: [],
+            },
+        ],
     },
 };
