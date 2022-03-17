@@ -10,10 +10,21 @@ module.exports = {
     ],
     parserOptions: {
         ecmaVersion: 2020,
+        ecmaFeatures: {
+            jsx: false,
+            js: false,
+            vue: true,
+        },
     },
     rules: {
         'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
         'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
+        'no-empty-function': [
+            'error',
+            {
+                allow: ['arrowFunctions', 'constructors', 'generatorFunctions',],
+            },
+        ],
         'indent': ['error', 4,],
         'linebreak-style': ['error', 'unix',],
         'quotes': ['warn', 'single',],
@@ -28,7 +39,7 @@ module.exports = {
             {
                 attribute: 1,
                 baseIndent: 1,
-                closeBracket: 0,
+                closeBracket: 1,
                 alignAttributesVertically: true,
                 ignores: [],
             },

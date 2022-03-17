@@ -7,7 +7,7 @@
                     class="my-3"
                     contain
                     height="200"
-                />
+                    />
             </v-col>
 
             <v-col class="mb-4">
@@ -22,14 +22,14 @@
                     <a
                         href="https://community.vuetifyjs.com"
                         target="_blank"
-                    >Discord Community</a>
+                        >Discord Community</a>
                 </p>
             </v-col>
 
             <v-col
                 class="mb-5"
                 cols="12"
-            >
+                >
                 <h2 class="headline font-weight-bold mb-5">
                     What's next?
                 </h2>
@@ -41,7 +41,7 @@
                         :href="next.href"
                         class="subheading mx-3"
                         target="_blank"
-                    >
+                        >
                         {{ next.text }}
                     </a>
                 </v-row>
@@ -50,7 +50,7 @@
             <v-col
                 class="mb-5"
                 cols="12"
-            >
+                >
                 <h2 class="headline font-weight-bold mb-5">
                     Important Links
                 </h2>
@@ -62,7 +62,7 @@
                         :href="link.href"
                         class="subheading mx-3"
                         target="_blank"
-                    >
+                        >
                         {{ link.text }}
                     </a>
                 </v-row>
@@ -71,7 +71,7 @@
             <v-col
                 class="mb-5"
                 cols="12"
-            >
+                >
                 <h2 class="headline font-weight-bold mb-5">
                     Ecosystem
                 </h2>
@@ -83,7 +83,7 @@
                         :href="eco.href"
                         class="subheading mx-3"
                         target="_blank"
-                    >
+                        >
                         {{ eco.text }}
                     </a>
                 </v-row>

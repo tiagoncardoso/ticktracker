@@ -1,10 +1,30 @@
 <template>
-    <nav>
-        <router-link to="/">Home</router-link> |
-        <router-link to="/about">About</router-link>
-    </nav>
-    <router-view/>
+    <v-app>
+        <SideBar/>
+
+        <TopBar/>
+        <v-main>
+            <v-container fluid>
+                <router-view></router-view>
+            </v-container>
+        </v-main>
+    </v-app>
 </template>
+
+<script lang="ts">
+
+import SideBar from '@/components/SideBar.vue';
+import TopBar from '@/components/TopBar.vue';
+
+export default {
+    name: 'App',
+
+    components: {
+        SideBar,
+        TopBar,
+    },
+};
+</script>
 
 <style lang="scss">
 #app {
