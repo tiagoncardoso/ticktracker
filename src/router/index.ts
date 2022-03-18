@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory, RouteRecordRaw, } from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 
+/* eslint-disable no-alert, no-console */
 const routes: Array<RouteRecordRaw> = [
     {
         path: '/',
@@ -10,12 +11,12 @@ const routes: Array<RouteRecordRaw> = [
     {
         path: '/tracker',
         name: 'tracker',
-        component: () => import('../views/TrackerView.vue'),
+        component: () => import(/* webpackChunkName: "tracker" */ '../views/TrackerView.vue'),
     },
     {
         path: '/currency',
         name: 'currency',
-        component: () => import('../views/CurrencyView.vue'),
+        component: () => import(/* webpackChunkName: "currency" */ '../views/CurrencyView.vue'),
     },
 ];
 
@@ -23,5 +24,5 @@ const router = createRouter({
     history: createWebHistory(process.env.BASE_URL,),
     routes,
 },);
-
+/* eslint-enable no-alert */
 export default router;
