@@ -25,11 +25,10 @@
             left
             bottom
             >
-            <template v-slot:activator="{ on, attrs }">
+            <template v-slot:activator="{ attrs }">
                 <v-btn
                     icon
                     v-bind="attrs"
-                    v-on="on"
                     >
                     <v-icon>mdi-dots-vertical</v-icon>
                 </v-btn>

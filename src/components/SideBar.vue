@@ -1,7 +1,7 @@
 <template>
     <v-navigation-drawer
         :rail="rail"
-        expand-on-hover="true"
+        :expand-on-hover=true
         v-model="mainSideBar"
         width="330"
         app
@@ -13,7 +13,7 @@
 
         >
         <v-list-item
-            prepend-avatar="https://randomuser.me/api/portraits/men/85.jpg"
+            prepend-avatar="https://randomuser.me/api/portraits/lego/4.jpg"
             title="Jonh Milk"
             >
             <template v-slot:append>
@@ -43,6 +43,19 @@
                 :value="menuItem.val"
                 ></v-list-item>
         </v-list>
+
+        <template v-slot:append>
+            <div class="pa-2" v-if="!rail">
+                <v-btn
+                    href="https://next.vuetifyjs.com/en"
+                    target="_blank"
+                    append-icon="mdi-bird"
+                    block
+                    class="bg-blue-grey-darken-4">
+                    Bye bye
+                </v-btn>
+            </div>
+        </template>
     </v-navigation-drawer>
 </template>
 
